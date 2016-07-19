@@ -3,33 +3,29 @@ Imports MySql.Data.MySqlClient
 
 Public Class CADO
 
-    Private mOConexion As SqlConnection
-    Private mOTransaccion As SqlTransaction
+    Private mOConexion As MySqlConnection
+    Private mOTransaccion As MySqlTransaction
 
-    Protected Property Conexion() As SqlConnection
+    Protected Property Conexion() As MySqlConnection
         Get
             Return mOConexion
         End Get
-        Set(ByVal value As SqlConnection)
+        Set(ByVal value As MySqlConnection)
             mOConexion = value
         End Set
     End Property
 
-    Protected ReadOnly Property Transaccion() As SqlTransaction
+    Protected ReadOnly Property Transaccion() As MySqlTransaction
         Get
             Return mOTransaccion
         End Get
     End Property
 
     Protected Sub Conectar(ByVal wIniciarTransaccion As Boolean)
-        'Dim mOConexion As New MySqlConnection(My.Settings.Conexion)
-        Dim DatabaseName As String = "controlpersonal"
-        Dim server As String = "127.0.0.1"
-        Dim userName As String = "root"
-        Dim password As String = "UzumakiRafaga"
-        Dim mOConexion As New MySqlConnection
-        mOConexion.ConnectionString = String.Format("server={0}; user id={1}; password={2}; database={3}; pooling=false", server, userName, password, DatabaseName)
-        mOConexion.Open()
+        mOConexion = New MySqlConnection("server=localhost;user=root;database=controlpersonal;port=3306;password=UzumakiRafaga;")
+
+            mOConexion.Open()
+
         If wIniciarTransaccion = True Then
             mOTransaccion = Me.Conexion.BeginTransaction
         End If
@@ -50,9 +46,9 @@ Public Class CADO
         Me.Conexion = Nothing
     End Sub
 
-    Protected Function PedirDataReader(ByVal wSQL As String, ByVal wParametros As List(Of CParametro)) As SqlDataReader
-        Dim cmd As New SqlCommand(wSQL, Me.Conexion)
-        Dim dr As SqlDataReader = Nothing
+    Protected Function PedirDataReader(ByVal wSQL As String, ByVal wParametros As List(Of CParametro)) As MySqlDataReader
+        Dim cmd As New MySqlCommand(wSQL, Me.Conexion)
+        Dim dr As MySqlDataReader = Nothing
 
         cmd.CommandType = CommandType.StoredProcedure
         Me.LlenarParametros(cmd, wParametros)
@@ -72,8 +68,8 @@ Public Class CADO
     End Function
 
     Protected Function PedirDatatable(ByVal wSQL As String, ByVal wParametros As List(Of CParametro)) As DataTable
-        Dim cmd As New SqlCommand(wSQL, Me.Conexion)
-        Dim da As New SqlDataAdapter(cmd)
+        Dim cmd As New MySqlCommand(wSQL, Me.Conexion)
+        Dim da As New MySqlDataAdapter(cmd)
         Dim dt As New DataTable
 
         If mOTransaccion IsNot Nothing Then
@@ -96,7 +92,7 @@ Public Class CADO
     End Function
 
     Protected Function EjecutarOrden(ByVal wSQL As String, ByVal wParametros As List(Of CParametro)) As Integer
-        Dim cmd As New SqlCommand(wSQL, Me.Conexion)
+        Dim cmd As New MySqlCommand(wSQL, Me.Conexion)
         Dim num As Integer
 
         cmd.CommandType = CommandType.StoredProcedure
@@ -119,7 +115,7 @@ Public Class CADO
     End Function
 
     Protected Function EjecutarSQL(ByVal wSQL As String) As Integer
-        Dim cmd As New SqlCommand(wSQL, Me.Conexion)
+        Dim cmd As New MySqlCommand(wSQL, Me.Conexion)
         Dim num As Integer
 
         cmd.CommandType = CommandType.Text
@@ -140,8 +136,8 @@ Public Class CADO
     End Function
 
     Protected Function EjecutarSQLDatos(ByVal wSQL As String) As DataTable
-        Dim cmd As New SqlCommand(wSQL, Me.Conexion)
-        Dim da As New SqlDataAdapter(cmd)
+        Dim cmd As New MySqlCommand(wSQL, Me.Conexion)
+        Dim da As New MySqlDataAdapter(cmd)
         Dim dt As New DataTable
 
         cmd.CommandType = CommandType.Text
@@ -161,7 +157,7 @@ Public Class CADO
     End Function
 
 
-    Private Sub LlenarParametros(ByVal cmd As SqlCommand, ByVal wParametros As List(Of CParametro))
+    Private Sub LlenarParametros(ByVal cmd As MySqlCommand, ByVal wParametros As List(Of CParametro))
 
         If wParametros IsNot Nothing Then
             For Each par As CParametro In wParametros
@@ -172,7 +168,7 @@ Public Class CADO
         End If
     End Sub
 
-    Private Sub VerParametrosSalida(ByVal cmd As SqlCommand, ByVal wParametros As List(Of CParametro))
+    Private Sub VerParametrosSalida(ByVal cmd As MySqlCommand, ByVal wParametros As List(Of CParametro))
 
         If wParametros IsNot Nothing Then
             With cmd.Parameters
@@ -186,9 +182,9 @@ Public Class CADO
     End Sub
 
 
-    Protected Function PedirDataReaderSQL(ByVal wSQL As String) As SqlDataReader
-        Dim cmd As New SqlCommand(wSQL, Me.Conexion)
-        Dim dr As SqlDataReader = Nothing
+    Protected Function PedirDataReaderSQL(ByVal wSQL As String) As MySqlDataReader
+        Dim cmd As New MySqlCommand(wSQL, Me.Conexion)
+        Dim dr As MySqlDataReader = Nothing
 
         cmd.CommandType = CommandType.Text
         If mOTransaccion IsNot Nothing Then

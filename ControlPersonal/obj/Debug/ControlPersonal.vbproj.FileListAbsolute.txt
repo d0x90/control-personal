@@ -18,3 +18,4 @@ C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\Cont
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.dll
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.pdb
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.xml
+C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmMain.resources
