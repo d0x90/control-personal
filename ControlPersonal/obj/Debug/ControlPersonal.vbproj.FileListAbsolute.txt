@@ -19,3 +19,7 @@ C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\Cont
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.pdb
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.xml
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmMain.resources
+C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmAcceso.resources
+C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEvento.resources
+C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermiso.resources
+C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajador.resources

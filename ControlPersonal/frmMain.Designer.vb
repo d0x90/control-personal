@@ -25,7 +25,6 @@ Partial Class frmMain
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrabajadoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PlanillaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ControlDeAccesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AmonestacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +36,7 @@ Partial Class frmMain
         Me.AsistenciasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.CongratulationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,7 +51,7 @@ Partial Class frmMain
         '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TrabajadoresToolStripMenuItem, Me.PlanillaToolStripMenuItem, Me.ControlDeAccesoToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TrabajadoresToolStripMenuItem, Me.ControlDeAccesoToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(123, 20)
         Me.MantenimientoToolStripMenuItem.Text = "Control de Personal"
@@ -62,12 +62,6 @@ Partial Class frmMain
         Me.TrabajadoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TrabajadoresToolStripMenuItem.Text = "Trabajadores"
         '
-        'PlanillaToolStripMenuItem
-        '
-        Me.PlanillaToolStripMenuItem.Name = "PlanillaToolStripMenuItem"
-        Me.PlanillaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PlanillaToolStripMenuItem.Text = "Planilla"
-        '
         'ControlDeAccesoToolStripMenuItem
         '
         Me.ControlDeAccesoToolStripMenuItem.Name = "ControlDeAccesoToolStripMenuItem"
@@ -76,7 +70,7 @@ Partial Class frmMain
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AmonestacionesToolStripMenuItem, Me.SancionesToolStripMenuItem, Me.LicenciasToolStripMenuItem, Me.PermisosToolStripMenuItem, Me.VacacionesToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AmonestacionesToolStripMenuItem, Me.CongratulationToolStripMenuItem, Me.SancionesToolStripMenuItem, Me.LicenciasToolStripMenuItem, Me.PermisosToolStripMenuItem, Me.VacacionesToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ReportesToolStripMenuItem.Text = "Consultas"
@@ -130,6 +124,12 @@ Partial Class frmMain
         Me.HistoriasToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.HistoriasToolStripMenuItem.Text = "Historias"
         '
+        'CongratulationToolStripMenuItem
+        '
+        Me.CongratulationToolStripMenuItem.Name = "CongratulationToolStripMenuItem"
+        Me.CongratulationToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.CongratulationToolStripMenuItem.Text = "Congratulation"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -150,7 +150,6 @@ Partial Class frmMain
     Friend WithEvents MantenimientoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TrabajadoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PlanillaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ControlDeAccesoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AmonestacionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SancionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -161,4 +160,5 @@ Partial Class frmMain
     Friend WithEvents AsistenciasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HistoriasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents CongratulationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

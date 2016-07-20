@@ -71,14 +71,14 @@ Partial Class frmLogin
         Me.txtUsuario.Location = New System.Drawing.Point(128, 26)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(217, 20)
-        Me.txtUsuario.TabIndex = 4
+        Me.txtUsuario.TabIndex = 0
         '
         'txtContrasenia
         '
         Me.txtContrasenia.Location = New System.Drawing.Point(128, 76)
         Me.txtContrasenia.Name = "txtContrasenia"
         Me.txtContrasenia.Size = New System.Drawing.Size(217, 20)
-        Me.txtContrasenia.TabIndex = 5
+        Me.txtContrasenia.TabIndex = 1
         '
         'frmLogin
         '

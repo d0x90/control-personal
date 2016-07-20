@@ -71,6 +71,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSesion.vb" />
+    <Compile Include="frmAcceso.Designer.vb">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEvento.Designer.vb">
+      <DependentUpon>frmEvento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,18 @@
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPermiso.Designer.vb">
+      <DependentUpon>frmPermiso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPermiso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrabajador.Designer.vb">
+      <DependentUpon>frmTrabajador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrabajador.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,11 +125,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAcceso.resx">
+      <DependentUpon>frmAcceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEvento.resx">
+      <DependentUpon>frmEvento.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPermiso.resx">
+      <DependentUpon>frmPermiso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrabajador.resx">
+      <DependentUpon>frmTrabajador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
