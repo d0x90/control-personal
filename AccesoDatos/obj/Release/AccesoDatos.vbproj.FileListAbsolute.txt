@@ -1,0 +1,9 @@
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\bin\Release\AccesoDatos.dll.config
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\bin\Release\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\bin\Release\AccesoDatos.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\bin\Release\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Release\AccesoDatos.Resources.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Release\AccesoDatos.vbproj.GenerateResource.Cache
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Release\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Release\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Release\AccesoDatos.pdb

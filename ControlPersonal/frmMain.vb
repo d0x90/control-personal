@@ -3,7 +3,7 @@
 
 
     Private Sub TrabajadoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TrabajadoresToolStripMenuItem.Click
-        MsgBox(DataSesion.idusuario)
+        'MsgBox(DataSesion.idusuario)
         Dim frmTrabajador As New frmTrabajador
         frmTrabajador.MdiParent = Me
         frmTrabajador.WindowState = FormWindowState.Maximized
@@ -20,7 +20,7 @@
 
     Private Sub AmonestacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AmonestacionesToolStripMenuItem.Click
         Dim frmEvento As New frmEvento
-        frmEvento.tipoEvento = "Amonestación"
+        frmEvento.tipoEvento = "Amonestacion"
         frmEvento.MdiParent = Me
         frmEvento.WindowState = FormWindowState.Maximized
         frmEvento.Show()
@@ -28,7 +28,7 @@
 
     Private Sub SancionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SancionesToolStripMenuItem.Click
         Dim frmEvento As New frmEvento
-        frmEvento.tipoEvento = "Sanción"
+        frmEvento.tipoEvento = "Sancion"
         frmEvento.MdiParent = Me
         frmEvento.WindowState = FormWindowState.Maximized
         frmEvento.Show()
@@ -65,5 +65,9 @@
         frmPermiso.MdiParent = Me
         frmPermiso.WindowState = FormWindowState.Maximized
         frmPermiso.Show()
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

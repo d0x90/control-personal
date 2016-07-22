@@ -15,9 +15,11 @@ Public Class RNUsuario
             parametros.Add(New CParametro("@ppassword", txtPassword))
             parametros.Add(New CParametro("@respuesta", False, CParametro.DireccionParametro.SALIDA))
             parametros.Add(New CParametro("@idusu", False, CParametro.DireccionParametro.SALIDA))
+            parametros.Add(New CParametro("@tipousu", False, CParametro.DireccionParametro.SALIDA))
             Me.EjecutarOrden("sp_verificarUsuario", parametros)
             respuesta.Add(parametros.Item(2).Valor)
             respuesta.Add(parametros.Item(3).Valor)
+            respuesta.Add(parametros.Item(4).Valor)
             Me.Cerrar(True)
         Catch ex As Exception
             Me.Cerrar(False)

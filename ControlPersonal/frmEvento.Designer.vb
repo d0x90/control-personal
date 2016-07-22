@@ -41,7 +41,8 @@ Partial Class frmEvento
         '
         'btnNuevo
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(296, 406)
+        Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnNuevo.Location = New System.Drawing.Point(272, 406)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(109, 30)
         Me.btnNuevo.TabIndex = 4
@@ -50,6 +51,9 @@ Partial Class frmEvento
         '
         'GroupBox2
         '
+        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.dgvEventos)
         Me.GroupBox2.Location = New System.Drawing.Point(272, 12)
         Me.GroupBox2.Name = "GroupBox2"
@@ -60,14 +64,23 @@ Partial Class frmEvento
         '
         'dgvEventos
         '
+        Me.dgvEventos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEventos.Location = New System.Drawing.Point(6, 19)
+        Me.dgvEventos.MultiSelect = False
         Me.dgvEventos.Name = "dgvEventos"
+        Me.dgvEventos.ReadOnly = True
+        Me.dgvEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvEventos.Size = New System.Drawing.Size(546, 351)
         Me.dgvEventos.TabIndex = 0
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
         Me.GroupBox1.Controls.Add(Me.txtDescripcion)
@@ -136,6 +149,7 @@ Partial Class frmEvento
         '
         'btnModificar
         '
+        Me.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnModificar.Location = New System.Drawing.Point(499, 406)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(109, 30)
@@ -145,6 +159,7 @@ Partial Class frmEvento
         '
         'btnEliminar
         '
+        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEliminar.Location = New System.Drawing.Point(694, 406)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(109, 30)

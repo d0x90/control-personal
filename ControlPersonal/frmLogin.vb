@@ -15,6 +15,27 @@ Public Class frmLogin
         Else
             DataSesion.idusuario = CInt(res.Item(1))
             frmMain.Show()
+            'Mantenimiento
+            frmMain.MantenimientoToolStripMenuItem.Enabled = False
+            'Consultas
+            frmMain.ReportesToolStripMenuItem.Enabled = False
+            'Reportes
+            frmMain.ReportesToolStripMenuItem1.Enabled = False
+
+            If CChar(res.Item(2)) = "A" Then
+                frmMain.MantenimientoToolStripMenuItem.Enabled = True
+                frmMain.ReportesToolStripMenuItem.Enabled = True
+                frmMain.ReportesToolStripMenuItem1.Enabled = True
+            ElseIf CChar(res.Item(2)) = "C" Then
+                frmMain.ReportesToolStripMenuItem.Enabled = True
+            ElseIf CChar(res.Item(2)) = "R" Then
+                frmMain.ReportesToolStripMenuItem1.Enabled = True
+            End If
+
+
+
+
+
             Me.Hide()
         End If
 

@@ -63,6 +63,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RNAcceso.vb" />
+    <Compile Include="RNEvento.vb" />
+    <Compile Include="RNPermiso.vb" />
+    <Compile Include="RNTrabajador.vb" />
     <Compile Include="RNUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

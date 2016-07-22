@@ -1,0 +1,15 @@
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\Reglas.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\Reglas.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\Reglas.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\Entidades.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\AccesoDatos.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\Entidades.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\bin\Release\Entidades.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Release\Reglas.vbprojResolveAssemblyReference.cache
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Release\Reglas.Resources.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Release\Reglas.vbproj.GenerateResource.Cache
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Release\Reglas.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Release\Reglas.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Release\Reglas.pdb

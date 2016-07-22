@@ -28,6 +28,7 @@ Partial Class frmMain
         Me.ControlDeAccesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AmonestacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CongratulationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SancionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenciasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,7 +37,6 @@ Partial Class frmMain
         Me.AsistenciasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.CongratulationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,13 +59,13 @@ Partial Class frmMain
         'TrabajadoresToolStripMenuItem
         '
         Me.TrabajadoresToolStripMenuItem.Name = "TrabajadoresToolStripMenuItem"
-        Me.TrabajadoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TrabajadoresToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.TrabajadoresToolStripMenuItem.Text = "Trabajadores"
         '
         'ControlDeAccesoToolStripMenuItem
         '
         Me.ControlDeAccesoToolStripMenuItem.Name = "ControlDeAccesoToolStripMenuItem"
-        Me.ControlDeAccesoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ControlDeAccesoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.ControlDeAccesoToolStripMenuItem.Text = "Asistencias"
         '
         'ReportesToolStripMenuItem
@@ -80,6 +80,12 @@ Partial Class frmMain
         Me.AmonestacionesToolStripMenuItem.Name = "AmonestacionesToolStripMenuItem"
         Me.AmonestacionesToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.AmonestacionesToolStripMenuItem.Text = "Amonestaciones"
+        '
+        'CongratulationToolStripMenuItem
+        '
+        Me.CongratulationToolStripMenuItem.Name = "CongratulationToolStripMenuItem"
+        Me.CongratulationToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.CongratulationToolStripMenuItem.Text = "Congratulation"
         '
         'SancionesToolStripMenuItem
         '
@@ -124,12 +130,6 @@ Partial Class frmMain
         Me.HistoriasToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.HistoriasToolStripMenuItem.Text = "Historias"
         '
-        'CongratulationToolStripMenuItem
-        '
-        Me.CongratulationToolStripMenuItem.Name = "CongratulationToolStripMenuItem"
-        Me.CongratulationToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.CongratulationToolStripMenuItem.Text = "Congratulation"
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -139,7 +139,9 @@ Partial Class frmMain
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Control de Personal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

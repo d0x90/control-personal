@@ -62,6 +62,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acceso.vb" />
+    <Compile Include="Evento.vb" />
+    <Compile Include="Permiso.vb" />
+    <Compile Include="Trabajador.vb" />
     <Compile Include="Usuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

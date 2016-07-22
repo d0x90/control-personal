@@ -39,6 +39,8 @@ Partial Class frmAcceso
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
         Me.GroupBox1.Controls.Add(Me.cmbTipo)
@@ -109,6 +111,9 @@ Partial Class frmAcceso
         '
         'GroupBox2
         '
+        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.dgvAccesos)
         Me.GroupBox2.Location = New System.Drawing.Point(272, 13)
         Me.GroupBox2.Name = "GroupBox2"
@@ -119,6 +124,9 @@ Partial Class frmAcceso
         '
         'dgvAccesos
         '
+        Me.dgvAccesos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvAccesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAccesos.Location = New System.Drawing.Point(6, 19)
         Me.dgvAccesos.Name = "dgvAccesos"
@@ -127,6 +135,8 @@ Partial Class frmAcceso
         '
         'Button1
         '
+        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Location = New System.Drawing.Point(272, 395)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(558, 30)

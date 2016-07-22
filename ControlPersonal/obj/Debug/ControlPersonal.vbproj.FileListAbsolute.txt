@@ -23,3 +23,28 @@ C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\Cont
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEvento.resources
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermiso.resources
 C:\Users\Diego Campos\Documents\Visual Studio 2013\Projects\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajador.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.exe.config
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.exe
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.exe
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\Entidades.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\Reglas.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\Entidades.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\Entidades.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\Reglas.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\Reglas.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.vbprojResolveAssemblyReference.cache
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmAcceso.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEvento.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmLogin.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmMain.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermiso.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajador.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.Resources.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.vbproj.GenerateResource.Cache
