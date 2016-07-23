@@ -78,6 +78,7 @@ Partial Class frmLogin
         '
         Me.txtContrasenia.Location = New System.Drawing.Point(128, 76)
         Me.txtContrasenia.Name = "txtContrasenia"
+        Me.txtContrasenia.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContrasenia.Size = New System.Drawing.Size(217, 20)
         Me.txtContrasenia.TabIndex = 1
         Me.txtContrasenia.Text = "123"

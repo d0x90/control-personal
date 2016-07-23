@@ -13,8 +13,15 @@ Public Class frmLogin
         If CInt(res.Item(0)) = 0 Then
             MsgBox("Error, usuario y/o contraseña incorrectos")
         Else
-            DataSesion.idusuario = CInt(res.Item(1))
+
+            Dim usuario As New Usuario
+            usuario = rn.ObtenerUsuario(CInt(res.Item(1)))
+            DataSesion.usuario = New Usuario
+            DataSesion.usuario = usuario
+
+            'DataSesion.idusuario = CInt(res.Item(1))
             frmMain.Show()
+
             'Mantenimiento
             frmMain.MantenimientoToolStripMenuItem.Enabled = False
             'Consultas
@@ -22,13 +29,13 @@ Public Class frmLogin
             'Reportes
             frmMain.ReportesToolStripMenuItem1.Enabled = False
 
-            If CChar(res.Item(2)) = "A" Then
+            If CChar(usuario.tipo) = "A"c Then
                 frmMain.MantenimientoToolStripMenuItem.Enabled = True
                 frmMain.ReportesToolStripMenuItem.Enabled = True
                 frmMain.ReportesToolStripMenuItem1.Enabled = True
-            ElseIf CChar(res.Item(2)) = "C" Then
+            ElseIf CChar(usuario.tipo) = "C"c Then
                 frmMain.ReportesToolStripMenuItem.Enabled = True
-            ElseIf CChar(res.Item(2)) = "R" Then
+            ElseIf CChar(usuario.tipo) = "R"c Then
                 frmMain.ReportesToolStripMenuItem1.Enabled = True
             End If
 
@@ -38,6 +45,10 @@ Public Class frmLogin
 
             Me.Hide()
         End If
+
+    End Sub
+
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

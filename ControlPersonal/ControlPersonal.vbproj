@@ -102,6 +102,12 @@
     <Compile Include="frmPermiso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPermisosReport.Designer.vb">
+      <DependentUpon>frmPermisosReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPermisosReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTrabajador.Designer.vb">
       <DependentUpon>frmTrabajador.vb</DependentUpon>
     </Compile>

@@ -26,6 +26,7 @@ Partial Class frmPermiso
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvPermisos = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -83,6 +84,7 @@ Partial Class frmPermiso
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -91,6 +93,7 @@ Partial Class frmPermiso
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.cmbTrabajador)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Enabled = False
         Me.GroupBox1.Location = New System.Drawing.Point(13, 24)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(244, 412)
@@ -98,8 +101,18 @@ Partial Class frmPermiso
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Permiso"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(9, 158)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 13)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Descripción"
+        '
         'btnCancelar
         '
+        Me.btnCancelar.Enabled = False
         Me.btnCancelar.Location = New System.Drawing.Point(142, 353)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
@@ -109,6 +122,7 @@ Partial Class frmPermiso
         '
         'btnGuardar
         '
+        Me.btnGuardar.Enabled = False
         Me.btnGuardar.Location = New System.Drawing.Point(6, 353)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
@@ -128,6 +142,7 @@ Partial Class frmPermiso
         'DateTimePicker2
         '
         Me.DateTimePicker2.CustomFormat = ""
+        Me.DateTimePicker2.Enabled = False
         Me.DateTimePicker2.Location = New System.Drawing.Point(77, 123)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(161, 20)
@@ -145,6 +160,7 @@ Partial Class frmPermiso
         'DateTimePicker1
         '
         Me.DateTimePicker1.CustomFormat = ""
+        Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Location = New System.Drawing.Point(77, 82)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(161, 20)
@@ -153,6 +169,7 @@ Partial Class frmPermiso
         'cmbTrabajador
         '
         Me.cmbTrabajador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTrabajador.Enabled = False
         Me.cmbTrabajador.FormattingEnabled = True
         Me.cmbTrabajador.Location = New System.Drawing.Point(77, 38)
         Me.cmbTrabajador.Name = "cmbTrabajador"
@@ -221,4 +238,5 @@ Partial Class frmPermiso
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
