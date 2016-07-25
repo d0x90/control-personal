@@ -6,13 +6,49 @@ ControlPersonal
 </name>
 </assembly>
 <members>
-<member name="T:ControlPersonal.DataSet1.TrabajadorDataTable">
+<member name="T:ControlPersonal.DataSet1.AccesoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.PermisoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.EventoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.TrabajadorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.AccesoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.PermisoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.EventoRow">
+	<summary>
+Represents strongly named DataRow class.
 </summary>
 </member><member name="T:ControlPersonal.DataSet1.TrabajadorRow">
 	<summary>
 Represents strongly named DataRow class.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.AccesoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.PermisoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.EventoRowChangeEvent">
+	<summary>
+Row event argument class
 </summary>
 </member><member name="T:ControlPersonal.DataSet1.TrabajadorRowChangeEvent">
 	<summary>

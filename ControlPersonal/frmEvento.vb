@@ -65,7 +65,7 @@ Public Class frmEvento
 
     End Sub
     Private Sub limpiarControles()
-        Me.cmbTrabajador.SelectedIndex = 0
+        Me.cmbTrabajador.SelectedIndex = -1
         Me.txtDescripcion.Text = ""
         Me.actual = Nothing
     End Sub
@@ -82,32 +82,46 @@ Public Class frmEvento
             Me.PresentarDatos()
 
         Else
-            MessageBox.Show("Debe seleccionar un permiso", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Debe seleccionar un evento", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim rn As New RNEvento
+        If Me.dgvEventos.CurrentRow IsNot Nothing Then
+            Me.actual = DirectCast(Me.dgvEventos.CurrentRow.DataBoundItem, Evento)
+            rn.eliminar(Me.actual)
+            Me.actual = Nothing
+            listarTabla()
+        Else
+            MessageBox.Show("Debe seleccionar un evento", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
 
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim rnEvento As New RNEvento
-        Dim evento As New Evento
-        evento.tipo = Me.tipoEvento
-        evento.descripcion = Me.txtDescripcion.Text
-        evento.trabajador = DirectCast(Me.cmbTrabajador.SelectedItem, Trabajador)
-        If actual Is Nothing Then
+        If Me.txtDescripcion.Text.Trim <> "" And Me.cmbTrabajador.SelectedIndex <> -1 Then
+            Dim rnEvento As New RNEvento
+            Dim evento As New Evento
+            evento.tipo = Me.tipoEvento
+            evento.descripcion = Me.txtDescripcion.Text
+            evento.trabajador = DirectCast(Me.cmbTrabajador.SelectedItem, Trabajador)
+            If actual Is Nothing Then
 
-            rnEvento.registrar(evento)
+                rnEvento.registrar(evento)
+            Else
+
+                evento.id = Me.actual.id
+                rnEvento.actualizar(evento)
+            End If
+            listarTabla()
+            Me.limpiarControles()
+            ActivarControles(False)
+            actual = Nothing
         Else
-
-            evento.id = Me.actual.id
-            rnEvento.actualizar(evento)
+            MsgBox("Rellene los campos para poder registrar/actualizar el Evento")
         End If
-        listarTabla()
-        Me.limpiarControles()
-        ActivarControles(False)
-        actual = Nothing
+        
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click

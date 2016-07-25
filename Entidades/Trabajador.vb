@@ -6,10 +6,15 @@
     Public Property seguro As Boolean
     Public Property asignacionFamiliar As Boolean
     Public Property sueldo As Decimal
+    Public Property area As String
+
+
+    
 
     Public ReadOnly Property LeerNombreTrabajador
         Get
             Return nombre & " " & apePaterno
         End Get
     End Property
+
 End Class

@@ -72,7 +72,7 @@ Partial Class frmLogin
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(217, 20)
         Me.txtUsuario.TabIndex = 0
-        Me.txtUsuario.Text = "newoverflow"
+        Me.txtUsuario.Text = "administrador"
         '
         'txtContrasenia
         '

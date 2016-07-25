@@ -24,12 +24,22 @@ Partial Class frmTrabajadoresReport
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TrabajadorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New ControlPersonal.DataSet1()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         CType(Me.TrabajadorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'TrabajadorBindingSource
+        '
+        Me.TrabajadorBindingSource.DataMember = "Trabajador"
+        Me.TrabajadorBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -43,23 +53,13 @@ Partial Class frmTrabajadoresReport
         Me.ReportViewer1.Size = New System.Drawing.Size(802, 463)
         Me.ReportViewer1.TabIndex = 0
         '
-        'TrabajadorBindingSource
-        '
-        Me.TrabajadorBindingSource.DataMember = "Trabajador"
-        Me.TrabajadorBindingSource.DataSource = Me.DataSet1
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'frmPermisosReport
+        'frmTrabajadoresReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(802, 463)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "frmPermisosReport"
+        Me.Name = "frmTrabajadoresReport"
         Me.Text = "Trabajadores"
         CType(Me.TrabajadorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()

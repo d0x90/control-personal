@@ -47,18 +47,24 @@ Public Class frmAcceso
     End Sub
 
     Private Sub limpiarControles()
-        Me.cmbTrabajador.SelectedIndex = 0
-        Me.cmbTipo.SelectedIndex = 0
+        Me.cmbTrabajador.SelectedIndex = -1
+        Me.cmbTipo.SelectedIndex = -1
 
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim rnAcceso As New RNAcceso
-        Dim acceso As New Acceso
-        acceso.trabajador = DirectCast(Me.cmbTrabajador.SelectedItem, Trabajador)
-        acceso.tipo = Me.cmbTipo.SelectedItem.ToString
-        rnAcceso.registrar(acceso)
-        listarTabla()
+        If Me.cmbTipo.SelectedIndex <> -1 And Me.cmbTrabajador.SelectedIndex <> -1 Then
+            Dim rnAcceso As New RNAcceso
+            Dim acceso As New Acceso
+            acceso.trabajador = DirectCast(Me.cmbTrabajador.SelectedItem, Trabajador)
+            acceso.tipo = Me.cmbTipo.SelectedItem.ToString
+            rnAcceso.registrar(acceso)
+            listarTabla()
+        Else
+            MsgBox("Rellene los campos para poder registrar")
+        End If
+
+
     End Sub
 
 

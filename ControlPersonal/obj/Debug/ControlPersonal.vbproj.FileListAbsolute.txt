@@ -51,3 +51,7 @@ C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersona
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\RdlCompile.cache
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\RdlCompile.compiled
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajadoresReport.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmAccesosReport.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermisosReporte.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEventosReporte.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmUsuario.resources

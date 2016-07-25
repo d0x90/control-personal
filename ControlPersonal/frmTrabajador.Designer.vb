@@ -27,11 +27,18 @@ Partial Class frmTrabajador
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvTrabajadores = New System.Windows.Forms.DataGridView()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.apePaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.apeMaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.area = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sueldo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Seguro = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.asignacionFamiliar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtSueldo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkAsignacionFamiliar = New System.Windows.Forms.CheckBox()
+        Me.chkSeguro = New System.Windows.Forms.CheckBox()
         Me.cmbArea = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtApeMaterno = New System.Windows.Forms.TextBox()
@@ -92,15 +99,75 @@ Partial Class frmTrabajador
         '
         'dgvTrabajadores
         '
+        Me.dgvTrabajadores.AllowUserToAddRows = False
+        Me.dgvTrabajadores.AllowUserToDeleteRows = False
         Me.dgvTrabajadores.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvTrabajadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTrabajadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTrabajadores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombre, Me.apePaterno, Me.apeMaterno, Me.area, Me.sueldo, Me.Seguro, Me.asignacionFamiliar})
         Me.dgvTrabajadores.Location = New System.Drawing.Point(6, 19)
+        Me.dgvTrabajadores.MultiSelect = False
         Me.dgvTrabajadores.Name = "dgvTrabajadores"
+        Me.dgvTrabajadores.ReadOnly = True
+        Me.dgvTrabajadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTrabajadores.Size = New System.Drawing.Size(546, 351)
         Me.dgvTrabajadores.TabIndex = 0
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "Nombre"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        '
+        'apePaterno
+        '
+        Me.apePaterno.DataPropertyName = "apePaterno"
+        Me.apePaterno.HeaderText = "A. Paterno"
+        Me.apePaterno.Name = "apePaterno"
+        Me.apePaterno.ReadOnly = True
+        '
+        'apeMaterno
+        '
+        Me.apeMaterno.DataPropertyName = "apeMaterno"
+        Me.apeMaterno.HeaderText = "A. Materno"
+        Me.apeMaterno.Name = "apeMaterno"
+        Me.apeMaterno.ReadOnly = True
+        '
+        'area
+        '
+        Me.area.DataPropertyName = "area"
+        Me.area.HeaderText = "Área"
+        Me.area.Name = "area"
+        Me.area.ReadOnly = True
+        '
+        'sueldo
+        '
+        Me.sueldo.DataPropertyName = "sueldo"
+        Me.sueldo.HeaderText = "Sueldo"
+        Me.sueldo.Name = "sueldo"
+        Me.sueldo.ReadOnly = True
+        Me.sueldo.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'Seguro
+        '
+        Me.Seguro.DataPropertyName = "seguro"
+        Me.Seguro.HeaderText = "seguro"
+        Me.Seguro.Name = "Seguro"
+        Me.Seguro.ReadOnly = True
+        Me.Seguro.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Seguro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'asignacionFamiliar
+        '
+        Me.asignacionFamiliar.DataPropertyName = "asignacionFamiliar"
+        Me.asignacionFamiliar.HeaderText = "A. Familiar"
+        Me.asignacionFamiliar.Name = "asignacionFamiliar"
+        Me.asignacionFamiliar.ReadOnly = True
+        Me.asignacionFamiliar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.asignacionFamiliar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'GroupBox1
         '
@@ -108,8 +175,8 @@ Partial Class frmTrabajador
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.txtSueldo)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.CheckBox2)
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
+        Me.GroupBox1.Controls.Add(Me.chkAsignacionFamiliar)
+        Me.GroupBox1.Controls.Add(Me.chkSeguro)
         Me.GroupBox1.Controls.Add(Me.cmbArea)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txtApeMaterno)
@@ -143,25 +210,25 @@ Partial Class frmTrabajador
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Sueldo"
         '
-        'CheckBox2
+        'chkAsignacionFamiliar
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(114, 245)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(116, 17)
-        Me.CheckBox2.TabIndex = 15
-        Me.CheckBox2.Text = "Asignación Familiar"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.chkAsignacionFamiliar.AutoSize = True
+        Me.chkAsignacionFamiliar.Location = New System.Drawing.Point(114, 245)
+        Me.chkAsignacionFamiliar.Name = "chkAsignacionFamiliar"
+        Me.chkAsignacionFamiliar.Size = New System.Drawing.Size(116, 17)
+        Me.chkAsignacionFamiliar.TabIndex = 15
+        Me.chkAsignacionFamiliar.Text = "Asignación Familiar"
+        Me.chkAsignacionFamiliar.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'chkSeguro
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 245)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(60, 17)
-        Me.CheckBox1.TabIndex = 14
-        Me.CheckBox1.Text = "Seguro"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkSeguro.AutoSize = True
+        Me.chkSeguro.Location = New System.Drawing.Point(15, 245)
+        Me.chkSeguro.Name = "chkSeguro"
+        Me.chkSeguro.Size = New System.Drawing.Size(60, 17)
+        Me.chkSeguro.TabIndex = 14
+        Me.chkSeguro.Text = "Seguro"
+        Me.chkSeguro.UseVisualStyleBackColor = True
         '
         'cmbArea
         '
@@ -285,6 +352,13 @@ Partial Class frmTrabajador
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtSueldo As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents chkAsignacionFamiliar As System.Windows.Forms.CheckBox
+    Friend WithEvents chkSeguro As System.Windows.Forms.CheckBox
+    Friend WithEvents nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents apePaterno As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents apeMaterno As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents area As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents sueldo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Seguro As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents asignacionFamiliar As System.Windows.Forms.DataGridViewCheckBoxColumn
 End Class

@@ -117,4 +117,18 @@ Public Class RNEvento
         Return eventos
     End Function
 
+    Function llenarReporte(p1 As String) As DataTable
+        Dim datatable As DataTable
+        Dim parametros As New List(Of CParametro)
+        Try
+            Me.Conectar(False)
+            parametros.Add(New CParametro("@tipofiltro", p1))
+            datatable = Me.PedirDatatable("sp_listarEventos", parametros)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Throw ex
+        End Try
+        Return datatable
+    End Function
+
 End Class

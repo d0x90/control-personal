@@ -112,7 +112,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>A.Paterno</Value>
+                              <Value>ape Paterno</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -148,7 +148,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>A.Materno</Value>
+                              <Value>ape Materno</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -184,7 +184,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>seguro</Value>
+                              <Value>mostrar Seguro</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -220,7 +220,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>asignacion Familiar</Value>
+                              <Value>mostrar Asignacion</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -422,14 +422,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="seguro">
+                    <Textbox Name="mostrarSeguro">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!seguro.Value</Value>
+                              <Value>=Fields!mostrarSeguro.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -439,7 +439,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>seguro</rd:DefaultName>
+                      <rd:DefaultName>mostrarSeguro</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -455,14 +455,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="asignacionFamiliar">
+                    <Textbox Name="mostrarAsignacion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!asignacionFamiliar.Value</Value>
+                              <Value>=Fields!mostrarAsignacion.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -472,7 +472,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>asignacionFamiliar</rd:DefaultName>
+                      <rd:DefaultName>mostrarAsignacion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -575,7 +575,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>f994ac91-4fce-4ac9-8dc3-79fcdf24f2ca</rd:DataSourceID>
+      <rd:DataSourceID>dc0a7954-a75f-4253-9fb2-af114cc340b1</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -601,12 +601,12 @@
           <DataField>apeMaterno</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="seguro">
-          <DataField>seguro</DataField>
+        <Field Name="mostrarSeguro">
+          <DataField>mostrarSeguro</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="asignacionFamiliar">
-          <DataField>asignacionFamiliar</DataField>
+        <Field Name="mostrarAsignacion">
+          <DataField>mostrarAsignacion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="sueldo">
@@ -625,5 +625,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>a6edba79-3630-4ab3-b4ed-013d6ea81f5d</rd:ReportID>
+  <rd:ReportID>ba1670eb-1077-48a2-b5a6-a99217ec02db</rd:ReportID>
 </Report>

@@ -12,7 +12,7 @@ Public Class frmPermiso
         listarTrabajadores()
     End Sub
     Private Sub limpiarControles()
-        Me.cmbTrabajador.SelectedIndex = 0
+        Me.cmbTrabajador.SelectedIndex = -1
         Me.DateTimePicker1.Value = Now
         Me.DateTimePicker2.Value = Now
         Me.txtDescripcion.Text = ""
@@ -94,37 +94,53 @@ Public Class frmPermiso
 
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim rnPermiso As New RNPermiso
-        Dim permiso As New Permiso
-        permiso.fechaInicio = DateTimePicker1.Value
-        permiso.fechaFin = DateTimePicker2.Value
-        
+        If Me.cmbTrabajador.SelectedIndex <> -1 And Me.txtDescripcion.Text.Trim <> "" Then
+            Dim rnPermiso As New RNPermiso
+            Dim permiso As New Permiso
+            permiso.fechaInicio = DateTimePicker1.Value
+            permiso.fechaFin = DateTimePicker2.Value
+
             Dim tspan As TimeSpan = DateTimePicker2.Value - DateTimePicker1.Value 'Dia Inicial + Dia final
             If tspan.Days = 0 Then
                 If DateTimePicker2.Value.Day = DateTimePicker1.Value.Day Then
-                permiso.cantidadDias = tspan.Days + 1
+                    permiso.cantidadDias = tspan.Days + 1
                 Else
-                permiso.cantidadDias = tspan.Days + 2
+                    permiso.cantidadDias = tspan.Days + 2
                 End If
             Else
-            permiso.cantidadDias = tspan.Days + 2
-        End If
-        permiso.trabajador = DirectCast(Me.cmbTrabajador.SelectedItem, Trabajador)
-        permiso.descripcion = Me.txtDescripcion.Text
-        permiso.tipo = Me.tipoPermiso
+                permiso.cantidadDias = tspan.Days + 2
+            End If
+            permiso.trabajador = DirectCast(Me.cmbTrabajador.SelectedItem, Trabajador)
+            permiso.descripcion = Me.txtDescripcion.Text
+            permiso.tipo = Me.tipoPermiso
 
-        If actual Is Nothing Then
+            If actual Is Nothing Then
 
-            rnPermiso.registrar(permiso)
+                rnPermiso.registrar(permiso)
+            Else
+
+                permiso.id = Me.actual.id
+                rnPermiso.actualizar(permiso)
+            End If
+            listarTabla()
+            Me.limpiarControles()
+            ActivarControles(False)
+            actual = Nothing
         Else
-
-            permiso.id = Me.actual.id
-            rnPermiso.actualizar(permiso)
+            MsgBox("Rellene los campos para poder registrar/actualizar el Permiso")
         End If
-        listarTabla()
-        Me.limpiarControles()
-        ActivarControles(False)
-        actual = Nothing
+        
     End Sub
 
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim rn As New RNPermiso
+        If Me.dgvPermisos.CurrentRow IsNot Nothing Then
+            Me.actual = DirectCast(Me.dgvPermisos.CurrentRow.DataBoundItem, Permiso)
+            rn.eliminar(Me.actual)
+            Me.actual = Nothing
+            listarTabla()
+        Else
+            MessageBox.Show("Debe seleccionar un permiso", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
 End Class

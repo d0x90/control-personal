@@ -49,4 +49,18 @@ Public Class RNAcceso
         End Try
         Return accesos
     End Function
+
+    Function llenarReporte() As DataTable
+        Dim datatable As DataTable
+        Dim parametros As New List(Of CParametro)
+        Try
+            Me.Conectar(False)
+            datatable = Me.PedirDatatable("sp_listarAccesos", parametros)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Throw ex
+        End Try
+        Return datatable
+    End Function
+
 End Class

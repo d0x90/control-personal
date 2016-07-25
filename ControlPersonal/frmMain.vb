@@ -67,17 +67,88 @@
         frmPermiso.Show()
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
+    
     Private Sub AsistenciasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsistenciasToolStripMenuItem.Click
 
-
+        Dim frm As New frmAccesosReport
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.Show()
     End Sub
 
     Private Sub TrabajadoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TrabajadoresToolStripMenuItem1.Click
         Dim frm As New frmTrabajadoresReport
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
         frm.Show()
     End Sub
+
+    Private Sub AmonestacionesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AmonestacionesToolStripMenuItem1.Click
+        Dim frm As New frmEventosReporte
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.tipoEvento = "Amonestacion"
+        frm.Show()
+    End Sub
+
+    Private Sub CongratulacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CongratulacionesToolStripMenuItem.Click
+        Dim frm As New frmEventosReporte
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.tipoEvento = "Congratulation"
+        frm.Show()
+    End Sub
+
+    Private Sub SancionesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SancionesToolStripMenuItem1.Click
+        Dim frm As New frmEventosReporte
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.tipoEvento = "Sancion"
+        frm.Show()
+    End Sub
+
+    Private Sub LicenciasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LicenciasToolStripMenuItem1.Click
+        Dim frm As New frmPermisosReporte
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.tipoPermiso = "Licencias"
+        frm.Show()
+    End Sub
+
+    Private Sub PermisosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PermisosToolStripMenuItem1.Click
+        Dim frm As New frmPermisosReporte
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.tipoPermiso = "Permisos"
+        frm.Show()
+    End Sub
+
+    Private Sub VacacionesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles VacacionesToolStripMenuItem1.Click
+        Dim frm As New frmPermisosReporte
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.tipoPermiso = "Vacaciones"
+        frm.Show()
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem.Click
+        Dim frm As New frmUsuario
+        frm.MdiParent = Me
+        frm.WindowState = FormWindowState.Maximized
+        frm.Show()
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+    Private Sub Form1_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+
+        If MessageBox.Show("Desea salir de la aplicación?", "Control de Personal", MessageBoxButtons.YesNo) = DialogResult.No Then
+            ' Cancel the Closing event from closing the form.
+            e.Cancel = True
+        Else
+            Application.Exit()
+        End If
+
+    End Sub 'Form1_Closing
 End Class

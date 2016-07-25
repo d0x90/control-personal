@@ -88,10 +88,22 @@
     <Compile Include="frmAcceso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAccesosReport.Designer.vb">
+      <DependentUpon>frmAccesosReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccesosReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEvento.Designer.vb">
       <DependentUpon>frmEvento.vb</DependentUpon>
     </Compile>
     <Compile Include="frmEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEventosReporte.Designer.vb">
+      <DependentUpon>frmEventosReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventosReporte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.vb">
@@ -113,6 +125,12 @@
     <Compile Include="frmPermiso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPermisosReporte.Designer.vb">
+      <DependentUpon>frmPermisosReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPermisosReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTrabajadoresReport.Designer.vb">
       <DependentUpon>frmTrabajadoresReport.vb</DependentUpon>
     </Compile>
@@ -123,6 +141,12 @@
       <DependentUpon>frmTrabajador.vb</DependentUpon>
     </Compile>
     <Compile Include="frmTrabajador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.vb">
+      <DependentUpon>frmUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -145,8 +169,14 @@
     <EmbeddedResource Include="frmAcceso.resx">
       <DependentUpon>frmAcceso.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAccesosReport.resx">
+      <DependentUpon>frmAccesosReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEvento.resx">
       <DependentUpon>frmEvento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEventosReporte.resx">
+      <DependentUpon>frmEventosReporte.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -157,11 +187,17 @@
     <EmbeddedResource Include="frmPermiso.resx">
       <DependentUpon>frmPermiso.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPermisosReporte.resx">
+      <DependentUpon>frmPermisosReporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTrabajadoresReport.resx">
       <DependentUpon>frmTrabajadoresReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -170,6 +206,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSet1.xsc">

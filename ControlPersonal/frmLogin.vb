@@ -3,7 +3,8 @@ Imports Reglas
 Public Class frmLogin
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Me.Close()
+        Application.Exit()
+
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
@@ -28,14 +29,19 @@ Public Class frmLogin
             frmMain.ReportesToolStripMenuItem.Enabled = False
             'Reportes
             frmMain.ReportesToolStripMenuItem1.Enabled = False
+            'Usuarios
+            frmMain.GestiónDeUsuariosToolStripMenuItem.Enabled = False
 
             If CChar(usuario.tipo) = "A"c Then
                 frmMain.MantenimientoToolStripMenuItem.Enabled = True
                 frmMain.ReportesToolStripMenuItem.Enabled = True
                 frmMain.ReportesToolStripMenuItem1.Enabled = True
+                frmMain.GestiónDeUsuariosToolStripMenuItem.Enabled = True
             ElseIf CChar(usuario.tipo) = "C"c Then
-                frmMain.ReportesToolStripMenuItem.Enabled = True
+                frmMain.MantenimientoToolStripMenuItem.Enabled = True
             ElseIf CChar(usuario.tipo) = "R"c Then
+                frmMain.ReportesToolStripMenuItem.Enabled = True
+            ElseIf CChar(usuario.tipo) = "E"c Then
                 frmMain.ReportesToolStripMenuItem1.Enabled = True
             End If
 
@@ -48,7 +54,7 @@ Public Class frmLogin
 
     End Sub
 
-    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
+    Private Sub Form1_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Application.Exit()
+    End Sub 'Form1_Closing
 End Class

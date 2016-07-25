@@ -54,4 +54,118 @@ Public Class RNUsuario
         End Try
         Return usuario
     End Function
+    Sub actualizar(wusuario As Usuario)
+        Dim parametros As New List(Of CParametro)
+        parametros.Add(New CParametro("@pid", wusuario.id))
+        parametros.Add(New CParametro("@pusername", wusuario.username))
+        parametros.Add(New CParametro("@ppswd", wusuario.pswd))
+        parametros.Add(New CParametro("@ptipo", wusuario.tipo))
+        parametros.Add(New CParametro("@ptrabajador", wusuario.trabajador.id))
+
+        Try
+            Me.Conectar(False)
+            Me.EjecutarOrden("sp_actualizarUsuario", parametros)
+            Me.Cerrar(True)
+        Catch ex As Exception
+            Me.Cerrar(False)
+            Throw ex
+        Finally
+            parametros.Clear()
+            parametros = Nothing
+        End Try
+    End Sub
+
+    Sub registrar(wusuario As Usuario)
+        Dim parametros As New List(Of CParametro)
+        parametros.Add(New CParametro("@pid", wusuario.id))
+        parametros.Add(New CParametro("@pusername", wusuario.username))
+        parametros.Add(New CParametro("@ppswd", wusuario.pswd))
+        parametros.Add(New CParametro("@ptipo", wusuario.tipo))
+        parametros.Add(New CParametro("@ptrabajador", wusuario.trabajador.id))
+        Try
+            Me.Conectar(False)
+            Me.EjecutarOrden("sp_insertarUsuario", parametros)
+            Me.Cerrar(True)
+        Catch ex As Exception
+            Me.Cerrar(False)
+            Throw ex
+        Finally
+            parametros.Clear()
+            parametros = Nothing
+        End Try
+    End Sub
+
+    Function leer(pid As Integer) As Usuario
+        Dim usuario As Usuario = Nothing
+        Dim parametros As New List(Of CParametro)
+        Dim dr As MySqlDataReader = Nothing
+        Try
+            Me.Conectar(False)
+            parametros.Add(New CParametro("@pid", pid))
+            dr = Me.PedirDataReader("sp_leerUsuario", parametros)
+            If dr.Read = True Then
+                usuario = New Usuario
+                With usuario
+                    .id = pid
+                    .username = dr.Item("username")
+                    .pswd = dr.Item("pswd")
+                    .tipo = dr.Item("tipo")
+                    .trabajador = New Trabajador With {.id = dr.Item("trabajador"), .nombre = dr.Item("nombreTrabajador"), .apePaterno = dr.Item("apellidoTrabajador")}
+
+                End With
+            End If
+            Me.Cerrar(True)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Me.Cerrar(False)
+        End Try
+        Return usuario
+    End Function
+
+    Sub eliminar(wUsuario As Usuario)
+        Dim parametros As New List(Of CParametro)
+        parametros.Add(New CParametro("@pid", wUsuario.id))
+        Try
+            Me.Conectar(False)
+            Me.EjecutarOrden("sp_eliminarUsuario", parametros)
+            Me.Cerrar(True)
+        Catch ex As Exception
+            Me.Cerrar(False)
+            Throw ex
+        Finally
+            parametros.Clear()
+            parametros = Nothing
+        End Try
+    End Sub
+    Public Function listar() As List(Of Usuario)
+        Dim usuarios As List(Of Usuario)
+        Dim dr As MySqlDataReader = Nothing
+        Dim parametros As New List(Of CParametro)
+        Try
+            Me.Conectar(False)
+            dr = Me.PedirDataReader("sp_listarUsuarios", parametros)
+            usuarios = New List(Of Usuario)
+            While dr.Read
+                usuarios.Add(New Usuario)
+                With usuarios.Item(usuarios.Count - 1)
+                    .id = dr.Item("id")
+                    .username = dr.Item("username")
+                    .pswd = dr.Item("pswd")
+                    .tipo = dr.Item("tipo")
+                    .trabajador = New Trabajador With {.id = dr.Item("trabajador"), .nombre = dr.Item("nombreTrabajador"), .apePaterno = dr.Item("apellidoTrabajador")}
+                End With
+            End While
+            Me.Cerrar(True)
+        Catch ex As Exception
+            Me.Cerrar(False)
+            Throw ex
+        Finally
+            If dr IsNot Nothing Then
+                dr.Close()
+            End If
+            dr = Nothing
+        End Try
+        Return usuarios
+
+    End Function
 End Class
