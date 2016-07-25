@@ -37,6 +37,7 @@ Partial Class frmMain
         Me.AsistenciasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.TrabajadoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -113,7 +114,7 @@ Partial Class frmMain
         '
         'ReportesToolStripMenuItem1
         '
-        Me.ReportesToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AsistenciasToolStripMenuItem, Me.HistoriasToolStripMenuItem})
+        Me.ReportesToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AsistenciasToolStripMenuItem, Me.HistoriasToolStripMenuItem, Me.TrabajadoresToolStripMenuItem1})
         Me.ReportesToolStripMenuItem1.Name = "ReportesToolStripMenuItem1"
         Me.ReportesToolStripMenuItem1.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem1.Text = "Reportes"
@@ -121,14 +122,20 @@ Partial Class frmMain
         'AsistenciasToolStripMenuItem
         '
         Me.AsistenciasToolStripMenuItem.Name = "AsistenciasToolStripMenuItem"
-        Me.AsistenciasToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.AsistenciasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AsistenciasToolStripMenuItem.Text = "Asistencias"
         '
         'HistoriasToolStripMenuItem
         '
         Me.HistoriasToolStripMenuItem.Name = "HistoriasToolStripMenuItem"
-        Me.HistoriasToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.HistoriasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HistoriasToolStripMenuItem.Text = "Historias"
+        '
+        'TrabajadoresToolStripMenuItem1
+        '
+        Me.TrabajadoresToolStripMenuItem1.Name = "TrabajadoresToolStripMenuItem1"
+        Me.TrabajadoresToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.TrabajadoresToolStripMenuItem1.Text = "Trabajadores"
         '
         'frmMain
         '
@@ -163,4 +170,5 @@ Partial Class frmMain
     Friend WithEvents HistoriasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents CongratulationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TrabajadoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

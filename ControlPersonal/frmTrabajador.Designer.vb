@@ -60,7 +60,7 @@ Partial Class frmTrabajador
         'btnModificar
         '
         Me.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnModificar.Location = New System.Drawing.Point(508, 406)
+        Me.btnModificar.Location = New System.Drawing.Point(507, 406)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(109, 30)
         Me.btnModificar.TabIndex = 11

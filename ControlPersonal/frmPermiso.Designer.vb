@@ -25,7 +25,12 @@ Partial Class frmPermiso
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvPermisos = New System.Windows.Forms.DataGridView()
+        Me.fechaInicio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechaFin = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreTrabajador = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -72,6 +77,7 @@ Partial Class frmPermiso
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvPermisos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPermisos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fechaInicio, Me.fechaFin, Me.nombreTrabajador, Me.descripcion})
         Me.dgvPermisos.Location = New System.Drawing.Point(6, 27)
         Me.dgvPermisos.MultiSelect = False
         Me.dgvPermisos.Name = "dgvPermisos"
@@ -80,10 +86,39 @@ Partial Class frmPermiso
         Me.dgvPermisos.Size = New System.Drawing.Size(546, 343)
         Me.dgvPermisos.TabIndex = 0
         '
+        'fechaInicio
+        '
+        Me.fechaInicio.DataPropertyName = "fechaInicio"
+        Me.fechaInicio.HeaderText = "Fecha de Inicio"
+        Me.fechaInicio.Name = "fechaInicio"
+        Me.fechaInicio.ReadOnly = True
+        '
+        'fechaFin
+        '
+        Me.fechaFin.DataPropertyName = "fechaFin"
+        Me.fechaFin.HeaderText = "Fecha de Fin"
+        Me.fechaFin.Name = "fechaFin"
+        Me.fechaFin.ReadOnly = True
+        '
+        'nombreTrabajador
+        '
+        Me.nombreTrabajador.DataPropertyName = "nombreTrabajador"
+        Me.nombreTrabajador.HeaderText = "Trabajador"
+        Me.nombreTrabajador.Name = "nombreTrabajador"
+        Me.nombreTrabajador.ReadOnly = True
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.txtDescripcion)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
@@ -100,6 +135,14 @@ Partial Class frmPermiso
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Permiso"
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Location = New System.Drawing.Point(12, 190)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(226, 110)
+        Me.txtDescripcion.TabIndex = 7
         '
         'Label4
         '
@@ -235,8 +278,13 @@ Partial Class frmPermiso
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnModificar As System.Windows.Forms.Button
-    Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents fechaInicio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fechaFin As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nombreTrabajador As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
 End Class

@@ -31,7 +31,10 @@ Partial Class frmAcceso
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvAccesos = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
+        Me.trabajador = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvAccesos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +50,7 @@ Partial Class frmAcceso
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cmbTrabajador)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Enabled = False
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(244, 412)
@@ -56,6 +60,7 @@ Partial Class frmAcceso
         '
         'btnCancelar
         '
+        Me.btnCancelar.Enabled = False
         Me.btnCancelar.Location = New System.Drawing.Point(127, 353)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(99, 23)
@@ -65,6 +70,7 @@ Partial Class frmAcceso
         '
         'btnGuardar
         '
+        Me.btnGuardar.Enabled = False
         Me.btnGuardar.Location = New System.Drawing.Point(9, 353)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(99, 23)
@@ -75,6 +81,7 @@ Partial Class frmAcceso
         'cmbTipo
         '
         Me.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTipo.Enabled = False
         Me.cmbTipo.FormattingEnabled = True
         Me.cmbTipo.Items.AddRange(New Object() {"Entrada", "Salida"})
         Me.cmbTipo.Location = New System.Drawing.Point(70, 78)
@@ -94,6 +101,7 @@ Partial Class frmAcceso
         'cmbTrabajador
         '
         Me.cmbTrabajador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTrabajador.Enabled = False
         Me.cmbTrabajador.FormattingEnabled = True
         Me.cmbTrabajador.Location = New System.Drawing.Point(70, 38)
         Me.cmbTrabajador.Name = "cmbTrabajador"
@@ -127,29 +135,55 @@ Partial Class frmAcceso
         Me.dgvAccesos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvAccesos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAccesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAccesos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.trabajador, Me.hora, Me.tipo})
         Me.dgvAccesos.Location = New System.Drawing.Point(6, 19)
+        Me.dgvAccesos.MultiSelect = False
         Me.dgvAccesos.Name = "dgvAccesos"
+        Me.dgvAccesos.ReadOnly = True
+        Me.dgvAccesos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAccesos.Size = New System.Drawing.Size(546, 351)
         Me.dgvAccesos.TabIndex = 0
         '
-        'Button1
+        'btnNuevo
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.btnNuevo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(272, 395)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(558, 30)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Registrar Acceso"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnNuevo.Location = New System.Drawing.Point(272, 395)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(558, 30)
+        Me.btnNuevo.TabIndex = 5
+        Me.btnNuevo.Text = "Registrar Acceso"
+        Me.btnNuevo.UseVisualStyleBackColor = True
+        '
+        'trabajador
+        '
+        Me.trabajador.DataPropertyName = "nombreTrabajador"
+        Me.trabajador.HeaderText = "Trabajador"
+        Me.trabajador.Name = "trabajador"
+        Me.trabajador.ReadOnly = True
+        '
+        'hora
+        '
+        Me.hora.DataPropertyName = "hora"
+        Me.hora.HeaderText = "Fecha-Hora"
+        Me.hora.Name = "hora"
+        Me.hora.ReadOnly = True
+        '
+        'tipo
+        '
+        Me.tipo.DataPropertyName = "tipo"
+        Me.tipo.HeaderText = "Tipo"
+        Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
         '
         'frmAcceso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(842, 461)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmAcceso"
@@ -163,7 +197,7 @@ Partial Class frmAcceso
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnNuevo As System.Windows.Forms.Button
     Friend WithEvents cmbTipo As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cmbTrabajador As System.Windows.Forms.ComboBox
@@ -171,4 +205,7 @@ Partial Class frmAcceso
     Friend WithEvents dgvAccesos As System.Windows.Forms.DataGridView
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents trabajador As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents hora As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents tipo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

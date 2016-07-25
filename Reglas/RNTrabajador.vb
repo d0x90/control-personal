@@ -39,5 +39,18 @@ Public Class RNTrabajador
         Return trabajadores
     End Function
 
+    Public Function llenarReporte() As DataTable
+        Dim datatable As DataTable
+        Dim parametros As New List(Of CParametro)
+        Try
+            Me.Conectar(False)
+            datatable = Me.PedirDatatable("sp_listarTrabajadores", parametros)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Throw ex
+        End Try
+        Return datatable
+    End Function
+
 
 End Class

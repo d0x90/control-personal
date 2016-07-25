@@ -8,4 +8,9 @@
     
     Public Property tipo As String
 
+    Public ReadOnly Property nombreTrabajador
+        Get
+            Return trabajador.nombre & " " & trabajador.apePaterno
+        End Get
+    End Property
 End Class

@@ -34,6 +34,8 @@ Partial Class frmEvento
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.nombreTrabajador = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -69,6 +71,7 @@ Partial Class frmEvento
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEventos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombreTrabajador, Me.descripcion})
         Me.dgvEventos.Location = New System.Drawing.Point(6, 19)
         Me.dgvEventos.MultiSelect = False
         Me.dgvEventos.Name = "dgvEventos"
@@ -167,6 +170,20 @@ Partial Class frmEvento
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
+        'nombreTrabajador
+        '
+        Me.nombreTrabajador.DataPropertyName = "nombreTrabajador"
+        Me.nombreTrabajador.HeaderText = "Trabajador"
+        Me.nombreTrabajador.Name = "nombreTrabajador"
+        Me.nombreTrabajador.ReadOnly = True
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        '
         'frmEvento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -198,4 +215,6 @@ Partial Class frmEvento
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
+    Friend WithEvents nombreTrabajador As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

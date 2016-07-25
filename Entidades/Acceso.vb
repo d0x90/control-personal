@@ -4,11 +4,11 @@
     Public Property tipo As Char
     Public Property trabajador As Trabajador
 
-    Public ReadOnly Property LeerNombreTrabajador
+
+    Public ReadOnly Property nombreTrabajador
         Get
             Return trabajador.nombre & " " & trabajador.apePaterno
         End Get
     End Property
-
 
 End Class

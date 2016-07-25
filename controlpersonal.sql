@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-07-2016 a las 01:16:29
+-- Tiempo de generación: 25-07-2016 a las 06:59:58
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -24,14 +24,32 @@ DELIMITER $$
 --
 -- Procedimientos
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_crearAcceso`(IN phora datetime, IN ptipo char(1), ptrabajador int)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_actualizarEvento`(pid INT,pdescripcion text,ptrabajador INT,ptipo varchar(20))
 BEGIN
-	INSERT INTO acceso(hora,tipo,trabajador) VALUES (phora,ptipo,ptrabajador);
+	UPDATE eventos set descripcion = pdescripcion,trabajador = ptrabajador,tipo = ptipo
+    WHERE id = pid;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertarEvento`(IN pnombre varchar(50),IN pdescripcion text,IN ptrabajador INT)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_actualizarPermiso`(pid INT,pcantidadDias int,pfechaInicio date, pfechaFin date,pdescripcion text, ptrabajador int,ptipo varchar(15))
 BEGIN
-	INSERT INTO `evento`(nombre,descripcion,trabajador) VALUES(pnombre,pdescripcion,ptrabajador);
+	UPDATE permisos set cantidadDias = pCantidadDias, fechaInicio = pfechaInicio,fechaFin = pfechaFin,descripcion = pdescripcion,trabajador = ptrabajador,tipo = ptipo
+    WHERE id = pid;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertarAcceso`(IN ptipo char(1), ptrabajador int)
+BEGIN
+	INSERT INTO acceso(hora,tipo,trabajador) VALUES (NOW(),ptipo,ptrabajador);
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertarEvento`(IN ptipo varchar(50),IN pdescripcion text,IN ptrabajador INT)
+BEGIN
+	INSERT INTO `eventos`(tipo,descripcion,trabajador) VALUES(ptipo,pdescripcion,ptrabajador);
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertarPermiso`(pcantidadDias int,pfechaInicio date, pfechaFin date,pdescripcion text, ptrabajador int,ptipo varchar(15))
+BEGIN
+INSERT INTO `permisos`(`cantidadDias`, `fechaInicio`, `fechaFin`, `descripcion`, `trabajador`, `tipo`)
+VALUES (pcantidadDias,pfechaInicio,pfechaFin,pdescripcion,ptrabajador,ptipo);
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertarTrabajador`(IN pnombre varchar(50), IN papePaterno varchar(50), IN papeMaterno varchar(50), pseguro BIT(1),IN pasignacionFamiliar BIT(1),IN psueldo decimal(6,2),IN parea char(1))
@@ -39,24 +57,56 @@ BEGIN
 	INSERT INTO `trabajador`(nombre,apePaterno,apeMaterno,seguro,asignacionFamiliar,sueldo,area) VALUES(pnombre,papePaterno,papeMaterno,pseguro,pasignacionFamiliar,psueldo,parea);
 END$$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_leerEvento`(IN `pid` INT)
+BEGIN
+	SELECT p.`id`,`descripcion`, `trabajador`, p.`tipo`,
+	t.nombre as nombreTrabajador, t.apePaterno as apellidoTrabajador
+	FROM `eventos` as p
+	JOIN `trabajador` as t	
+	WHERE p.trabajador = t.id AND p.id=pid;
+	
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_leerPermiso`(pid INT)
+BEGIN
+	SELECT p.`id`, `cantidadDias`, `fechaInicio`, `fechaFin`, `descripcion`, `trabajador`, p.`tipo`,
+	t.nombre as nombreTrabajador, t.apePaterno as apellidoTrabajador
+	FROM `permisos` as p
+	JOIN `trabajador` as t	
+	WHERE p.trabajador = t.id AND p.id=pid;
+	
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_leerUsuario`(IN pid INT )
 BEGIN
 	SELECT `id`, `username`, `pswd`, `tipo`, `trabajador` FROM `usuario`  WHERE  `id` = pid;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_listarAccesos`(IN `tipofiltro` VARCHAR(50))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_listarAccesos`()
 BEGIN
-    		SELECT `id`, `hora`, `tipo`, `trabajador` FROM `acceso` WHERE tipo LIKE CONCAT('%',tipofiltro,'%');
+    		SELECT a.`id`, a.`hora`, a.`tipo`, a.`trabajador`,t.nombre as nombreTrabajador,t.apePaterno as apellidoTrabajador
+				FROM `acceso` a
+				JOIN `trabajador` as t	
+				WHERE a.trabajador = t.id ORDER BY a.hora DESC;
     END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_listarEventos`(IN tipofiltro varchar(50))
 BEGIN
-	SELECT `id`, `nombre`, `descripcion`, `trabajador` FROM `eventos` where nombre like CONCAT('%',tipofiltro,'%');
+	SELECT  e.`id`, e.`tipo`, e.`descripcion`, e.`trabajador`,t.nombre as nombreTrabajador,t.apePaterno as apellidoTrabajador
+	 FROM `eventos` as e
+	 JOIN `trabajador` as t	
+	 WHERE e.trabajador = t.id 
+	 AND e.tipo like CONCAT('%',tipofiltro,'%');
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_listarPermisos`(IN tipofiltro varchar(50))
 BEGIN
-	SELECT `id`, `cantidadDias`, `fechaInicio`, `fechaFin`, `descripcion`, `trabajador`, `tipo` FROM `permisos` WHERE tipo like CONCAT('%',tipofiltro,'%');
+	SELECT p.id, p.cantidadDias, p.fechaInicio, p.fechaFin, p.descripcion, p.trabajador, p.tipo,t.nombre as nombreTrabajador,t.apePaterno as apellidoTrabajador
+	FROM `permisos` as p
+	JOIN `trabajador` as t
+	
+	WHERE p.trabajador = t.id 
+  AND tipo like CONCAT('%',tipofiltro,'%');
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_listarTrabajadores`()
@@ -90,15 +140,16 @@ CREATE TABLE IF NOT EXISTS `acceso` (
   `hora` datetime NOT NULL,
   `tipo` char(1) COLLATE utf8_spanish2_ci NOT NULL,
   `trabajador` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `acceso`
 --
 
 INSERT INTO `acceso` (`id`, `hora`, `tipo`, `trabajador`) VALUES
-(1, '2016-07-20 06:28:43', 'E', 1),
-(2, '2016-07-20 16:53:52', 'S', 1);
+(5, '2016-07-24 23:50:00', 'E', 1),
+(6, '2016-07-24 23:50:57', 'E', 2),
+(7, '2016-07-24 23:53:56', 'S', 1);
 
 -- --------------------------------------------------------
 
@@ -108,19 +159,20 @@ INSERT INTO `acceso` (`id`, `hora`, `tipo`, `trabajador`) VALUES
 
 CREATE TABLE IF NOT EXISTS `eventos` (
   `id` int(11) NOT NULL,
-  `nombre` enum('congratulation','amonestacion','sancion') COLLATE utf8_spanish2_ci NOT NULL,
+  `tipo` enum('congratulation','amonestacion','sancion') COLLATE utf8_spanish2_ci NOT NULL,
   `descripcion` text COLLATE utf8_spanish2_ci NOT NULL,
   `trabajador` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `eventos`
 --
 
-INSERT INTO `eventos` (`id`, `nombre`, `descripcion`, `trabajador`) VALUES
+INSERT INTO `eventos` (`id`, `tipo`, `descripcion`, `trabajador`) VALUES
 (1, 'congratulation', 'ABC', 1),
-(2, 'amonestacion', 'AMO', 1),
-(3, 'sancion', 'sanción', 1);
+(2, 'amonestacion', 'Amonestación', 1),
+(3, 'sancion', 'sanción', 1),
+(4, 'amonestacion', 'GEGE', 1);
 
 -- --------------------------------------------------------
 
@@ -136,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `permisos` (
   `descripcion` text COLLATE utf8_spanish2_ci NOT NULL,
   `trabajador` int(11) NOT NULL,
   `tipo` enum('licencias','permisos','vacaciones') COLLATE utf8_spanish2_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `permisos`
@@ -144,7 +196,8 @@ CREATE TABLE IF NOT EXISTS `permisos` (
 
 INSERT INTO `permisos` (`id`, `cantidadDias`, `fechaInicio`, `fechaFin`, `descripcion`, `trabajador`, `tipo`) VALUES
 (1, 10, '2016-07-20', '2016-07-20', 'Cumpleaños', 1, 'permisos'),
-(2, 15, '2016-07-01', '2016-07-15', 'vacaciones', 2, 'vacaciones');
+(2, 15, '2016-07-01', '2016-07-15', 'vacaciones', 2, 'vacaciones'),
+(4, 5, '2016-07-24', '2016-07-27', 'Licencia x cualquier cosa.', 1, 'licencias');
 
 -- --------------------------------------------------------
 
@@ -235,17 +288,17 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `acceso`
 --
 ALTER TABLE `acceso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `trabajador`
 --

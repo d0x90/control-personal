@@ -7,9 +7,11 @@ Public Class RNPermiso
 
     Public Sub registrar(ByVal wPermiso As Permiso)
         Dim parametros As New List(Of CParametro)
-        parametros.Add(New CParametro("@pcantidaddias", wPermiso.cantidadDias))
+        parametros.Add(New CParametro("@pcantidadDias", wPermiso.cantidadDias))
+        parametros.Add(New CParametro("@pfechaInicio", wPermiso.fechaInicio))
+        parametros.Add(New CParametro("@pfechaFin", wPermiso.fechaFin))
         parametros.Add(New CParametro("@pdescripcion", wPermiso.descripcion))
-        parametros.Add(New CParametro("@pfechainicio", wPermiso.fechaInicio))
+        parametros.Add(New CParametro("@ptrabajador", wPermiso.trabajador.id))
         parametros.Add(New CParametro("@ptipo", wPermiso.tipo))
 
         Try
@@ -27,9 +29,11 @@ Public Class RNPermiso
     Public Sub actualizar(ByVal wPermiso As Permiso)
         Dim parametros As New List(Of CParametro)
         parametros.Add(New CParametro("@pid", wPermiso.id))
-        parametros.Add(New CParametro("@pcantidaddias", wPermiso.cantidadDias))
+        parametros.Add(New CParametro("@pcantidadDias", wPermiso.cantidadDias))
+        parametros.Add(New CParametro("@pfechaInicio", wPermiso.fechaInicio))
+        parametros.Add(New CParametro("@pfechaFin", wPermiso.fechaFin))
         parametros.Add(New CParametro("@pdescripcion", wPermiso.descripcion))
-        parametros.Add(New CParametro("@pfechainicio", wPermiso.fechaInicio))
+        parametros.Add(New CParametro("@ptrabajador", wPermiso.trabajador.id))
         parametros.Add(New CParametro("@ptipo", wPermiso.tipo))
 
         Try
@@ -77,7 +81,8 @@ Public Class RNPermiso
                     .fechaInicio = dr.Item("fechaInicio")
                     .fechaFin = dr.Item("fechaFin")
                     .tipo = dr.Item("tipo")
-                    .trabajador = New Trabajador With {.id = dr.Item("trabajador")}
+                    .descripcion = dr.Item("descripcion")
+                    .trabajador = New Trabajador With {.id = dr.Item("trabajador"), .nombre = dr.Item("nombreTrabajador"), .apePaterno = dr.Item("apellidoTrabajador")}
                 End With
             End If
             Me.Cerrar(True)
@@ -106,6 +111,7 @@ Public Class RNPermiso
                     .fechaInicio = dr.Item("fechaInicio")
                     .tipo = dr.Item("tipo")
                     .cantidadDias = dr.Item("cantidadDias")
+                    .trabajador = New Trabajador With {.id = dr.Item("trabajador"), .nombre = dr.Item("nombreTrabajador"), .apePaterno = dr.Item("apellidoTrabajador")}
                 End With
             End While
             Me.Cerrar(True)

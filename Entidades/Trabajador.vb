@@ -7,5 +7,9 @@
     Public Property asignacionFamiliar As Boolean
     Public Property sueldo As Decimal
 
-
+    Public ReadOnly Property LeerNombreTrabajador
+        Get
+            Return nombre & " " & apePaterno
+        End Get
+    End Property
 End Class

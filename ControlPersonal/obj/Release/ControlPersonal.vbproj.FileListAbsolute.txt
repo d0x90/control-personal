@@ -23,3 +23,6 @@ C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersona
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Release\ControlPersonal.exe
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Release\ControlPersonal.xml
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Release\ControlPersonal.pdb
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Release\ControlPersonal.frmPermisosReport.resources
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Release\RdlCompile.cache
+C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Release\RdlCompile.compiled

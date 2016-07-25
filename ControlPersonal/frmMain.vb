@@ -70,4 +70,14 @@
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub AsistenciasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsistenciasToolStripMenuItem.Click
+
+
+    End Sub
+
+    Private Sub TrabajadoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TrabajadoresToolStripMenuItem1.Click
+        Dim frm As New frmTrabajadoresReport
+        frm.Show()
+    End Sub
 End Class
