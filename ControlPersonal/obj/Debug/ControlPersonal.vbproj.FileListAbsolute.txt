@@ -55,3 +55,71 @@ C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersona
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermisosReporte.resources
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEventosReporte.resources
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmUsuario.resources
+G:\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.exe.config
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.exe
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.xml
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.pdb
+G:\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.exe
+G:\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.pdb
+G:\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.xml
+G:\ControlPersonal\ControlPersonal\bin\Debug\Entidades.dll
+G:\ControlPersonal\ControlPersonal\bin\Debug\Reglas.dll
+G:\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.dll
+G:\ControlPersonal\ControlPersonal\bin\Debug\Entidades.pdb
+G:\ControlPersonal\ControlPersonal\bin\Debug\Entidades.xml
+G:\ControlPersonal\ControlPersonal\bin\Debug\Reglas.pdb
+G:\ControlPersonal\ControlPersonal\bin\Debug\Reglas.xml
+G:\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.pdb
+G:\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.xml
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.vbprojResolveAssemblyReference.cache
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmAcceso.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmAccesosReport.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEvento.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEventosReporte.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmLogin.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmMain.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermiso.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermisosReporte.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajadoresReport.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajador.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmUsuario.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.Resources.resources
+G:\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.vbproj.GenerateResource.Cache
+G:\ControlPersonal\ControlPersonal\obj\Debug\RdlCompile.cache
+G:\ControlPersonal\ControlPersonal\obj\Debug\RdlCompile.compiled
+G:\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.exe.config
+G:\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.exe
+G:\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.xml
+G:\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.exe.config
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.exe
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.exe
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\ControlPersonal.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\Entidades.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\Reglas.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\Entidades.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\Entidades.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\Reglas.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\Reglas.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\bin\Debug\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.vbprojResolveAssemblyReference.cache
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmAcceso.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmAccesosReport.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEvento.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmEventosReporte.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmLogin.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmMain.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermiso.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmPermisosReporte.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajadoresReport.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmTrabajador.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.frmUsuario.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.Resources.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\ControlPersonal.vbproj.GenerateResource.Cache
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\RdlCompile.cache
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\ControlPersonal\obj\Debug\RdlCompile.compiled

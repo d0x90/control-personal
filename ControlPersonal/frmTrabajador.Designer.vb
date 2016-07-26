@@ -187,6 +187,7 @@ Partial Class frmTrabajador
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
+        Me.GroupBox1.Enabled = False
         Me.GroupBox1.Location = New System.Drawing.Point(13, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(244, 437)
@@ -196,6 +197,7 @@ Partial Class frmTrabajador
         '
         'txtSueldo
         '
+        Me.txtSueldo.Enabled = False
         Me.txtSueldo.Location = New System.Drawing.Point(79, 207)
         Me.txtSueldo.Name = "txtSueldo"
         Me.txtSueldo.Size = New System.Drawing.Size(159, 20)
@@ -213,6 +215,7 @@ Partial Class frmTrabajador
         'chkAsignacionFamiliar
         '
         Me.chkAsignacionFamiliar.AutoSize = True
+        Me.chkAsignacionFamiliar.Enabled = False
         Me.chkAsignacionFamiliar.Location = New System.Drawing.Point(114, 245)
         Me.chkAsignacionFamiliar.Name = "chkAsignacionFamiliar"
         Me.chkAsignacionFamiliar.Size = New System.Drawing.Size(116, 17)
@@ -223,6 +226,7 @@ Partial Class frmTrabajador
         'chkSeguro
         '
         Me.chkSeguro.AutoSize = True
+        Me.chkSeguro.Enabled = False
         Me.chkSeguro.Location = New System.Drawing.Point(15, 245)
         Me.chkSeguro.Name = "chkSeguro"
         Me.chkSeguro.Size = New System.Drawing.Size(60, 17)
@@ -233,6 +237,7 @@ Partial Class frmTrabajador
         'cmbArea
         '
         Me.cmbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbArea.Enabled = False
         Me.cmbArea.FormattingEnabled = True
         Me.cmbArea.Items.AddRange(New Object() {"Contabilidad", "Especialista", "RR.HH"})
         Me.cmbArea.Location = New System.Drawing.Point(79, 164)
@@ -251,6 +256,7 @@ Partial Class frmTrabajador
         '
         'txtApeMaterno
         '
+        Me.txtApeMaterno.Enabled = False
         Me.txtApeMaterno.Location = New System.Drawing.Point(79, 123)
         Me.txtApeMaterno.Name = "txtApeMaterno"
         Me.txtApeMaterno.Size = New System.Drawing.Size(159, 20)
@@ -267,6 +273,7 @@ Partial Class frmTrabajador
         '
         'txtApePaterno
         '
+        Me.txtApePaterno.Enabled = False
         Me.txtApePaterno.Location = New System.Drawing.Point(79, 83)
         Me.txtApePaterno.Name = "txtApePaterno"
         Me.txtApePaterno.Size = New System.Drawing.Size(159, 20)
@@ -283,6 +290,7 @@ Partial Class frmTrabajador
         '
         'txtNombre
         '
+        Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(79, 43)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(159, 20)
@@ -299,6 +307,7 @@ Partial Class frmTrabajador
         '
         'btnCancelar
         '
+        Me.btnCancelar.Enabled = False
         Me.btnCancelar.Location = New System.Drawing.Point(130, 353)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(99, 23)
@@ -308,6 +317,7 @@ Partial Class frmTrabajador
         '
         'btnGuardar
         '
+        Me.btnGuardar.Enabled = False
         Me.btnGuardar.Location = New System.Drawing.Point(12, 353)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(99, 23)

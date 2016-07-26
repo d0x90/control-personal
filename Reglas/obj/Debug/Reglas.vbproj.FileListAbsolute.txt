@@ -28,3 +28,33 @@ C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Deb
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Debug\Reglas.dll
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Debug\Reglas.xml
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\Reglas\obj\Debug\Reglas.pdb
+G:\ControlPersonal\Reglas\bin\Debug\Reglas.dll
+G:\ControlPersonal\Reglas\bin\Debug\Reglas.pdb
+G:\ControlPersonal\Reglas\bin\Debug\Reglas.xml
+G:\ControlPersonal\Reglas\bin\Debug\AccesoDatos.dll
+G:\ControlPersonal\Reglas\bin\Debug\Entidades.dll
+G:\ControlPersonal\Reglas\bin\Debug\AccesoDatos.pdb
+G:\ControlPersonal\Reglas\bin\Debug\AccesoDatos.xml
+G:\ControlPersonal\Reglas\bin\Debug\Entidades.pdb
+G:\ControlPersonal\Reglas\bin\Debug\Entidades.xml
+G:\ControlPersonal\Reglas\obj\Debug\Reglas.vbprojResolveAssemblyReference.cache
+G:\ControlPersonal\Reglas\obj\Debug\Reglas.Resources.resources
+G:\ControlPersonal\Reglas\obj\Debug\Reglas.vbproj.GenerateResource.Cache
+G:\ControlPersonal\Reglas\obj\Debug\Reglas.dll
+G:\ControlPersonal\Reglas\obj\Debug\Reglas.xml
+G:\ControlPersonal\Reglas\obj\Debug\Reglas.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\Reglas.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\Reglas.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\Reglas.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\Entidades.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\AccesoDatos.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\Entidades.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\bin\Debug\Entidades.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\obj\Debug\Reglas.vbprojResolveAssemblyReference.cache
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\obj\Debug\Reglas.Resources.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\obj\Debug\Reglas.vbproj.GenerateResource.Cache
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\obj\Debug\Reglas.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\obj\Debug\Reglas.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\Reglas\obj\Debug\Reglas.pdb

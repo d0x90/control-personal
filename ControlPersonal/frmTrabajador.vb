@@ -154,4 +154,28 @@ Public Class frmTrabajador
         End Try
     End Sub
 
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+    Private Sub chkSeguro_CheckedChanged(sender As Object, e As EventArgs) Handles chkSeguro.CheckedChanged
+
+    End Sub
+    Private Sub chkAsignacionFamiliar_CheckedChanged(sender As Object, e As EventArgs) Handles chkAsignacionFamiliar.CheckedChanged
+
+    End Sub
+    Private Sub txtSueldo_TextChanged(sender As Object, e As EventArgs) Handles txtSueldo.TextChanged
+
+    End Sub
+    Private Sub cmbArea_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbArea.SelectedIndexChanged
+
+    End Sub
+    Private Sub txtApeMaterno_TextChanged(sender As Object, e As EventArgs) Handles txtApeMaterno.TextChanged
+
+    End Sub
+    Private Sub txtApePaterno_TextChanged(sender As Object, e As EventArgs) Handles txtApePaterno.TextChanged
+
+    End Sub
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
+    End Sub
 End Class

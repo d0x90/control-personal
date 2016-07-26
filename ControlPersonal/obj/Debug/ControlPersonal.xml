@@ -6,7 +6,20 @@ ControlPersonal
 </name>
 </assembly>
 <members>
-<member name="T:ControlPersonal.DataSet1.AccesoDataTable">
+<member name="P:ControlPersonal.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ControlPersonal.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ControlPersonal.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:ControlPersonal.DataSet1.AccesoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -57,19 +70,6 @@ Row event argument class
 </member><member name="T:ControlPersonal.DataSet1">
 	<summary>
 Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="P:ControlPersonal.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:ControlPersonal.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:ControlPersonal.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 </members>

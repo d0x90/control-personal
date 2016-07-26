@@ -16,3 +16,21 @@ C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\ob
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.dll
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.xml
 C:\Users\Diego Campos\Desktop\@me\controlPersonal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.pdb
+G:\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.dll.config
+G:\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.dll
+G:\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.pdb
+G:\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.xml
+G:\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.Resources.resources
+G:\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.vbproj.GenerateResource.Cache
+G:\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.dll
+G:\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.xml
+G:\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.dll.config
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.pdb
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\bin\Debug\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.Resources.resources
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.vbproj.GenerateResource.Cache
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.dll
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.xml
+C:\Users\Diego Campos\Desktop\Sistema Control Personal\ControlPersonal\AccesoDatos\obj\Debug\AccesoDatos.pdb

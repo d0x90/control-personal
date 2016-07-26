@@ -25,6 +25,8 @@ Partial Class frmEvento
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvEventos = New System.Windows.Forms.DataGridView()
+        Me.nombreTrabajador = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -34,8 +36,6 @@ Partial Class frmEvento
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.nombreTrabajador = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -80,6 +80,20 @@ Partial Class frmEvento
         Me.dgvEventos.Size = New System.Drawing.Size(546, 351)
         Me.dgvEventos.TabIndex = 0
         '
+        'nombreTrabajador
+        '
+        Me.nombreTrabajador.DataPropertyName = "nombreTrabajador"
+        Me.nombreTrabajador.HeaderText = "Trabajador"
+        Me.nombreTrabajador.Name = "nombreTrabajador"
+        Me.nombreTrabajador.ReadOnly = True
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "Descripción"
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.ReadOnly = True
+        '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -90,6 +104,7 @@ Partial Class frmEvento
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cmbTrabajador)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Enabled = False
         Me.GroupBox1.Location = New System.Drawing.Point(13, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(244, 437)
@@ -99,6 +114,7 @@ Partial Class frmEvento
         '
         'btnCancelar
         '
+        Me.btnCancelar.Enabled = False
         Me.btnCancelar.Location = New System.Drawing.Point(130, 353)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(99, 23)
@@ -108,6 +124,7 @@ Partial Class frmEvento
         '
         'btnGuardar
         '
+        Me.btnGuardar.Enabled = False
         Me.btnGuardar.Location = New System.Drawing.Point(12, 353)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(99, 23)
@@ -117,6 +134,7 @@ Partial Class frmEvento
         '
         'txtDescripcion
         '
+        Me.txtDescripcion.Enabled = False
         Me.txtDescripcion.Location = New System.Drawing.Point(6, 108)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
@@ -135,6 +153,7 @@ Partial Class frmEvento
         'cmbTrabajador
         '
         Me.cmbTrabajador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTrabajador.Enabled = False
         Me.cmbTrabajador.FormattingEnabled = True
         Me.cmbTrabajador.Location = New System.Drawing.Point(70, 38)
         Me.cmbTrabajador.Name = "cmbTrabajador"
@@ -169,20 +188,6 @@ Partial Class frmEvento
         Me.btnEliminar.TabIndex = 6
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'nombreTrabajador
-        '
-        Me.nombreTrabajador.DataPropertyName = "nombreTrabajador"
-        Me.nombreTrabajador.HeaderText = "Trabajador"
-        Me.nombreTrabajador.Name = "nombreTrabajador"
-        Me.nombreTrabajador.ReadOnly = True
-        '
-        'descripcion
-        '
-        Me.descripcion.DataPropertyName = "descripcion"
-        Me.descripcion.HeaderText = "Descripción"
-        Me.descripcion.Name = "descripcion"
-        Me.descripcion.ReadOnly = True
         '
         'frmEvento
         '
